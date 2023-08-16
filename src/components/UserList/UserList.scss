@@ -1,0 +1,54 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+.UserList {
+  &._edit {
+    .UserList__button {
+      display: none;
+    }
+  }
+
+  &__select-controls {
+    padding-bottom: 10px;
+  }
+
+  &__select-button {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__header-cell {
+    &--controls {
+      min-width: 90px;
+    }
+  }
+
+  &__row {
+    transition: background-color .3s;
+
+    &._selected {
+      background-color: $primary;
+      transition: background-color .15s;
+
+      .UserList__cell {
+        color: #FFFFFF;
+        transition: color .15s;
+      }
+    }
+  }
+
+  &__cell {
+    transition: color .3s;
+
+    &--controls {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
